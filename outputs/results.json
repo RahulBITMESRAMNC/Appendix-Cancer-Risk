@@ -1,0 +1,87 @@
+{
+  "baseline_comparison": {
+    "Random Forest": {
+      "accuracy": 0.712,
+      "precision": 0.1426563598032326,
+      "recall": 0.18085783377879597,
+      "f1": 0.15950162756762823
+    },
+    "XGBoost": {
+      "accuracy": 0.8443461538461539,
+      "precision": 0.15451895043731778,
+      "recall": 0.006745577192312588,
+      "f1": 0.012926829268292682
+    },
+    "LightGBM": {
+      "accuracy": 0.8466153846153847,
+      "precision": 0.14792899408284024,
+      "recall": 0.0031818760341097113,
+      "f1": 0.0062297533017692495
+    }
+  },
+  "baseline_markdown_table": "| Model | Accuracy | Precision | Recall | F1-score |\n|---|---|---|---|---|\n| Random Forest | 0.7120 | 0.1427 | 0.1809 | 0.1595 |\n| XGBoost | 0.8443 | 0.1545 | 0.0067 | 0.0129 |\n| LightGBM | 0.8466 | 0.1479 | 0.0032 | 0.0062 |",
+  "shap_pipeline": {
+    "baseline": {
+      "accuracy": 0.8466153846153847,
+      "precision": 0.14792899408284024,
+      "recall": 0.0031818760341097113,
+      "f1": 0.0062297533017692495
+    },
+    "feature_selection": {
+      "accuracy": 0.8479230769230769,
+      "precision": 0.14084507042253522,
+      "recall": 0.0012727504136438843,
+      "f1": 0.0025227043390514633
+    },
+    "feature_construction": {
+      "accuracy": 0.8482307692307692,
+      "precision": 0.1111111111111111,
+      "recall": 0.0006363752068219422,
+      "f1": 0.0012655024044545685
+    },
+    "feature_weighting": {
+      "accuracy": 0.8482307692307692,
+      "precision": 0.1111111111111111,
+      "recall": 0.0006363752068219422,
+      "f1": 0.0012655024044545685
+    }
+  },
+  "top_features": [
+    "Red_Blood_Cell_Count",
+    "White_Blood_Cell_Count",
+    "Survival_Years_After_Diagnosis",
+    "Physical_Activity_Level",
+    "Alcohol_Consumption",
+    "Gender",
+    "Smoking_Status",
+    "Chronic_Diseases",
+    "Country",
+    "Diet_Type",
+    "Family_History_Cancer",
+    "Tumor_Markers",
+    "Treatment_Type",
+    "BMI",
+    "Chronic_Severity"
+  ],
+  "shap_weights": {
+    "Red_Blood_Cell_Count": 1.0,
+    "White_Blood_Cell_Count": 0.34909588475511283,
+    "Survival_Years_After_Diagnosis": 0.12541799154918534,
+    "Physical_Activity_Level": 0.10629136111835977,
+    "Alcohol_Consumption": 0.09898988271435906,
+    "Gender": 0.09753720672751136,
+    "Smoking_Status": 0.08954826603770137,
+    "Chronic_Diseases": 0.0874292065290867,
+    "Country": 0.07742656822124033,
+    "Diet_Type": 0.07474024823786271,
+    "Family_History_Cancer": 0.06704438676152615,
+    "Tumor_Markers": 0.06560736248191779,
+    "Treatment_Type": 0.06349399288835285,
+    "BMI": 0.05026230597175077,
+    "Chronic_Severity": 0.025335886592399166
+  },
+  "auc_sanity_check": {
+    "baseline_auc": 0.5050545242926875,
+    "final_auc": 0.501262129984247
+  }
+}
