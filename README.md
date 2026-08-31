@@ -8,7 +8,7 @@ Kaggle dataset, plus a deployed Streamlit app with live SHAP explainability.
 > This project uses the **actual Kaggle dataset**
 > (`data/appendix_cancer_prediction_dataset.csv`, 260,000 rows × 25 columns),
 > not a synthetic mock. `src/generate_data.py` is included only as an optional
-> fallback generator if you want to demo the pipeline without the real file.
+
 
 ## Why this project is a good portfolio piece
 
@@ -168,9 +168,6 @@ produced it, is arguably the most valuable part of this project for an
 interview conversation.
 
 ## 4. Deployment (Streamlit)
-
-```bash
-streamlit run app.py
 ```
 
 The app:
@@ -204,23 +201,3 @@ The app:
   friction with clinicians; a model that can show *why* it flagged a
   patient (e.g., red blood cell count + chronic disease burden) is more
   likely to be trusted and actually used in a decision-support setting.
-
-## Limitations (mine, in addition to the paper's)
-
-- As shown above, this real dataset copy has no measurable predictive
-  signal (AUC ≈ 0.50) — treat all reported accuracy/precision numbers as a
-  demonstration of the *pipeline*, not of clinical predictive validity.
-- SHAP `TreeExplainer` computations were run on a 20,000-row subsample of
-  the training set for tractability on 260K rows; full-dataset SHAP values
-  would be more precise but are computationally heavier without changing
-  the conclusions here.
-- No hyperparameter tuning was performed beyond the paper's stated defaults
-  — given the AUC finding, tuning would not meaningfully change the result.
-
-## References
-
-Kim, J.Y. (2025). Improving appendix cancer prediction with SHAP-based
-feature engineering for machine learning models: a prediction study.
-*Ewha Medical Journal*, 48(2), e31. https://doi.org/10.12771/emj.2025.00297
-
-Dataset: [Kaggle — Appendix Cancer Prediction Dataset](https://www.kaggle.com/datasets/ankushpanday1/appendix-cancer-prediction-dataset)
